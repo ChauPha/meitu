@@ -1,0 +1,57 @@
+/*main*/
+div.main{
+  background: url(../images/lifestyle_bg.png) 50% 0 no-repeat #fff;
+  position: relative;
+  overflow: hidden;
+}
+div.style_wrapper{
+  width: 1190px;
+  margin: 0 auto;
+}
+div.style_shirt{
+  height: 598px;
+  position: relative;
+}
+a.btn_shirt{
+  top: 480px;
+  left: 465px;
+  background-color: #f54a7e;
+  width: 250px;
+  height: 70px;
+  line-height: 69px;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  position: absolute;
+
+  text-shadow: 0 1px 3px #C4308E;
+  letter-spacing: 2px;
+}
+div.style_content{
+
+}
+div.shirt_intro{
+  position: relative;
+  width: 1190px;
+  height: 350px;
+  text-align: left;
+  margin-top: 88px;
+}
+p.shirt_intro_text{
+  position: absolute;
+  top: 180px;
+  left: 40px;
+  width: 580px;
+  color: #727171;
+  font-size: 16px;
+}
+div.shirt_show{
+  text-align: center;
+  padding-left:0;
+}
+div.shirt_show{
+  margin-top: 88px;
+  border:0;
+}

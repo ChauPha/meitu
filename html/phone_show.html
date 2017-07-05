@@ -1,0 +1,25 @@
+<div ng-include="'html/include/header.html'"></div>
+<div class="p_s_header">
+    <div class="theme">
+        <a href="#/main" class="link_home">首页</a>
+        <span class="link_to">&gt;</span>
+        <span class="link_des">美图手机</span>
+    </div>
+</div>
+<div class="p_s_main">
+    <div class="phone_box">
+        <ul class="phone_list">
+            <li class="phone_item" ng-repeat="item in phoneList">
+                <a href="#/phone/{{item.phone_id}}" class="phone_link">
+                    <img src="img/{{item.phone_image}}" class="phone_img"/>
+                    <h2 class="phone_title">{{item.phone_name}}</h2>
+                    <p class="phone_desc">{{item.phone_title}}</p>
+                    <p class="phone_price">￥{{item.phone_price}}</p>
+                </a>
+
+            </li>
+
+        </ul>
+    </div>
+</div>
+<div ng-include="'html/include/footer.html'"></div>

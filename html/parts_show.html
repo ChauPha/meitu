@@ -1,0 +1,67 @@
+<div ng-include="'html/include/header.html'"></div>
+<!--header-->
+<div class="parts_header">
+    <div class="theme">
+        <a href="#/main" class="link_home">首页</a>
+        <span class="link_to">&gt;</span>
+        <span class="link_des">配件</span>
+    </div>
+</div>
+<!--main-->
+<div class="parts_main">
+    <div class="parts_category">
+        <div class="cate_row">
+            <a href="#/parts_show/all/all" class="cate_more">更多</a>
+            <span class="cate_title">分类</span>
+            <ul class="cate_list" ng-controller="cateCtrl">
+                <li class="cate_item active" data-type="all">
+                    <a href="#/parts_show/{{cate}}/all" class="cate_link">全部</a>
+                </li>
+                <li class="cate_item" ng-repeat="item in typeList" data-type="{{item.np_type}}">
+                    <a href="#/parts_show/{{cate}}/{{item.np_type}}" class="cate_link" >{{item.np_type}}</a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="sortby">
+            <ul class="sortby_list">
+                <li class="sort_item">
+                        <span class="sort_link">
+                            新品
+                        </span>
+                </li>
+                <li class="sort_sep"></li>
+                <li class="sort_item">
+                        <span class="sort_link">
+                            价格 ↑
+                        </span>
+                </li>
+            </ul>
+        </div>
+        <div class="cate_box">
+            <ul class="good_list" ng-controller="cateCtrl">
+                <li class="good_item" ng-repeat="item in cateList">
+                    <a href="#" class="good_add">
+                        ha
+                    </a>
+                    <a href="#/parts_detail/{{item.np_id}}" class="good_img">
+                        <img src="img/{{item.np_s_image}}"/>
+                    </a>
+                    <div class="good_thumb">
+                        <div class="good_thumb_img">
+                            <img src="img/{{item.np_s_image}}" />
+                        </div>
+                    </div>
+                    <h3 class="good_title">
+                        {{item.np_name}}
+                    </h3>
+                    <div class="good_price">
+                        <p><span>￥{{item.np_price}}</span></p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<div ng-include="'html/include/footer.html'"></div>

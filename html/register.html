@@ -1,0 +1,105 @@
+
+<!--header-->
+<div class="reg_header">
+    <div class="header_content">
+        <h1 class="logo">
+            <a href="#/login" class="logo_id"></a>
+            <a href="#/main" class="logo_mt"></a>
+        </h1>
+        <div class="top_right">
+            <a href="#/login">登录</a>
+            <span>|</span>
+            <a href="#/register">注册</a>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!--main-->
+<div class="reg_main" >
+    <div class="reg_container">
+        <div class="page_header">
+            <span class="icon_reg"></span>
+            <span class="theme_reg">手机注册</span>
+            <div class="clear"></div>
+        </div>
+        <div class="main_reg_content" ng-controller="regCtrl">
+            <div class="reg_form" id="reg_form">
+                <ul class="reg_ul">
+                    <li>
+                        <span class="phone_text">手机号码</span>
+                        <input type="text" class="phone_check" id="login_name" autocomplete="off"/>
+                        <i class="r_icon r_icon_yes"></i>
+                        <span class="info_text">*11位手机号码</span>
+                        <div class="login tips">
+                            <i class="r_icon_minus r_icon"></i>
+                            <span class="error name_error">手机号不能为空</span>
+                            <em></em>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="phone_text">手机验证</span>
+                        <input type="text" class="phone_check" id="code" autocomplete="off" placeholder="手机验证码" style="width:106px"/>
+                        <button id="btn_send" type="button" disabled>获取验证码</button>
+                        <div class="tips check_code">
+                            <i class="r_icon_minus r_icon"></i>
+                            <span class="error code_error">验证码错误</span>
+                            <em></em>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="phone_text">设置密码</span>
+                        <input type="text" class="phone_check" id="userpwd" autocomplete="off"/>
+                        <i class="r_icon r_icon_yes"></i>
+                        <span class="info_text">*6~16个字符</span>
+                        <div class="tips">
+                            <i class="r_icon_minus r_icon"></i>
+                            <span class="error pwd_error">密码不能为空</span>
+                            <em ></em>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="phone_text">重复密码</span>
+                        <input type="text" class="phone_check" id="pwd_repeat" autocomplete="off"/>
+                        <i class="r_icon r_icon_yes"></i>
+                        <span class="info_text"></span>
+                        <div class="tips">
+                            <i class="r_icon_minus r_icon"></i>
+                            <span class="error pwd_repeat_error">重复密码不能为空</span>
+                            <em></em>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="phone_text">&nbsp;</span>
+                        <label for="agreement">
+                            <input type="checkbox" id="agreement"/>阅读并接受
+                            <a href="#/register" class="blueblank">《美图账号服务条款》</a>
+                        </label>
+                        <span class="info_text"></span>
+                    </li>
+                    <li>
+                        <a href="#/register" class="btn" id="reg_btn">注册</a>
+                    </li>
+                </ul>
+                <div class="sideLogin">
+                    在美图其他产品上注册过？请 <a href="#/login" class="blueblank">直接登录</a>
+                    <div class="connectArea">
+                        或使用其他方式登录：<br/>
+
+                        <a href="#/register"><i class="icon icon_sina"></i></a>
+                        <a href="#/register"><i class="icon icon_qq"></i></a>
+                        <a href="#/register"><i class="icon icon_alipay"></i></a>
+                        <a href="#/register"><i class="icon icon_renren"></i></a>
+                        <a href="#/register"><i class="icon icon_douban"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<div class="reg_footer" >
+    <div class="footer_content">
+        ©2016 Meitu, Inc. 美图公司版权所有 <a href="#/register">闽B2-20040192</a>
+    </div>
+</div>

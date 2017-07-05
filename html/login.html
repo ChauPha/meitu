@@ -1,0 +1,77 @@
+
+<!--header-->
+<div class="lg_header">
+    <div class="lg_header" >
+        <div class="header_content">
+            <h1 class="logo">
+                <a href="#/login" class="logo_id"></a>
+                <a href="#/main" class="logo_mt"></a>
+            </h1>
+            <div class="top_right">
+                <a href="#/login" ng-controller="loginCtrl">{{customer_name}}</a>
+                <span>|</span>
+                <a href="#/register">注册</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+<!--main-->
+<div class="lg_main">
+    <div class="container">
+        <div class="loginArea">
+            <div class="login_lt">
+                <img src="images/pic_login.jpg"/>
+            </div>
+            <div class="login_rt">
+                <div class="form_login">
+                    <div class="login_content" ng-controller="loginCtrl">
+                        <h3>美图帐号登录</h3>
+                        <div class="login_phone" id="userPhone">
+                            <input type="text" placeholder="邮箱/手机号码" class="input_info" ng-model="user_name"/>
+                            <div class="login tips">
+                                <i class="r_icon_minus r_icon"></i>
+                                <span class="error name_error">用户名或密码不正确</span>
+                                <em></em>
+                            </div>
+                        </div>
+
+                        <div class="login_phone" id="userPwd">
+                            <input type="text" placeholder="密码" class="input_info" ng-model="user_pwd"/>
+
+                        </div>
+                        <div class="login_agree">
+                            <span class="agree_lt"><input type="checkbox"/>两天内自动登录</span>
+                            <a href="#/login" class="agree_rt">忘记密码？</a>
+                        </div>
+                        <div class="login_btn">
+                            <span ng-click="login(user_name,user_pwd)">
+                                登录</span>
+
+                        </div>
+
+                    </div>
+                    <div class="login_other">
+                        或使用 其他方式登录 <br/>
+                        <p>
+                            <a href="#/login"><i class="icon icon_sina"></i></a>
+                            <a href="#/login"><i class="icon icon_qq"></i></a>
+                            <a href="#/login"><i class="icon icon_alipay"></i></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="guide">
+                    还没有美图帐号？<a href="#/register">立即注册</a>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<div class="footer" id="footer">
+    <div class="footer_content">
+        ©2016 Meitu, Inc. 美图公司版权所有 <a href="#/login">闽B2-20040192</a>
+    </div>
+</div>

@@ -1,0 +1,97 @@
+
+<!--top顶部-->
+<div id="top" ng-controller="parentCtrl">
+    <div id="content">
+        <ul id="login_area" ng-controller="detailCtrl">
+            <li><a href="#/login" ng-controller="loginCtrl" id="login_name">{{customer_name}}</a><span ></span><a href="#/register">注册</a></li>
+            <li><a href="#/main">S码通道</a></li>
+            <li class="cart"><a href="#/shopcart"><span>购物车</span><em>{{count}}</em></a>
+                <div id="shopcart">
+                    <ul >
+                        <li ng-hide=cart>购物车还没有东西，<a href="#/phone_show">现在去挑选</a></li>
+                        <li ng-show=cart ng-repeat="item in cartList">
+                            <a  class="del_cart" ng-click="delCart(item.cart_id)">X</a>
+                            <a class="cart_img">
+                                <img src="img/{{item.cart_image}}" />
+                            </a>
+                            <div class="cart_spec">
+                                <p>{{item.cart_norms}}</p>
+                            </div>
+                            <div class="cart_number">
+                                <span class="reduce" ng-click="reduceCart(item.cart_id,-1)">-</span>
+                                <span class="number">{{item.cart_count}}</span>
+                                <span class="pluson" ng-click="plusCart(item.cart_id,1)">+</span>
+                            </div>
+                            <div class="cart_price">{{item.cart_price}}</div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <ul id="top_nav">
+            <li>
+                <a href="#/main">美图官网</a>
+
+            </li>
+            <li><a href="#/main">App<span class="arrow_down"></span></a><ul>
+                <li><a href="#/main">美图秀秀</a></li>
+                <li><a href="#/beauty_camera">美颜相机</a></li>
+                <li><a href="#/main">美拍</a></li>
+                <li><a href="#/main">了解更多产品</a></li>
+            </ul></li>
+            <li><a href="#/main">智能硬件<span class="arrow_down"></span></a><ul>
+                <li><a href="#/phone_show">美图拍照手机</a></li>
+                <li><a href="#/camera">美图相机</a></li>
+            </ul></li>
+            <li><a href="#/main">Select Region<span class="arrow_down"></span></a><ul>
+                <li><a href="#/main">Global Home</a></li>
+                <li><a href="#/main">Hong Kong</a></li>
+                <li><a href="#/main">Macao</a></li>
+                <li><a href="#/main">Taiwan</a></li>
+            </ul></li>
+        </ul>
+
+    </div>
+</div>
+<!--nav导航部分-->
+<div id="nav">
+    <div id="meitu"><img src="images/meitu.png"/></div>
+    <ul class="mt_nav">
+        <li><a href="#/phone_show">手机</a></li>
+        <li><a href="#/camera">相机</a></li>
+        <li><a href="#/parts_show/all/all">配件</a></li>
+        <li class="last_nav"><a href="#/main">服务</a></li>
+        <li class="last_nav"><a href="#/main">福利社</a></li>
+
+    </ul>
+    <div class="slide">
+        <div class="sub_nav" id="sub_nav1">
+            <ul class="pro_list" ng-controller="psCtrl">
+                <li ng-repeat="item in phoneList"><a href="#/phone/{{item.phone_id}}">
+                    <img src="img/{{item.phone_s_image}}"/><br/>{{item.phone_name}}</a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="sub_nav" id="sub_nav2">
+            <ul class="pro_list">
+                <li><a href="#/camera_photo"><img src="images/mt_good2_1.jpg"/><br/>美图BF1</a></li>
+            </ul>
+        </div>
+        <div class="sub_nav" id="sub_nav3">
+            <ul class="pro_list" ng-controller="npCtrl">
+                <li ng-repeat="item in npList">
+                    <a href="#/parts_detail/{{item.np_id}}">
+                        <img src="img/{{item.np_s_image}}"/><br/>{{item.np_name}}
+                    </a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="mt_search">
+        <input type="button" autocomplete="off"/>
+        <input class="search_text" type="text" placeholder="美图M6"/>
+    </div>
+    <div class="clear"></div>
+</div>
+<script src="js/header.js"></script>

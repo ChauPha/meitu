@@ -1,0 +1,15 @@
+*{margin:0;padding:0;}
+body{
+  font:400 12px/1.5 "Helvetica Neue",
+  Helvetica,Arial,"Microsoft YaHei","Hiragino Sans GB",sans-serif;
+}
+li{list-style: none;}
+.clear{
+  clear:both;
+}
+a{
+  cursor:pointer;
+}
+img{
+  vertical-align: bottom;
+}

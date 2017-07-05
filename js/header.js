@@ -1,0 +1,68 @@
+/**
+ * Created by bjwsl-001 on 2016/11/9.
+ */
+//显示头部top的下拉框
+$("ul#top_nav>li").hover(function(e){
+  //console.log(222);
+  //console.log(e.target);
+  $(e.target).siblings("ul").slideDown();
+  //e.target.className="change";
+},function(e){
+  $(e.target).siblings("ul").slideUp();
+  //.target.className="";
+});
+$("ul#top_nav>li>ul").hover(function(e){
+  //console.log(e.target);
+  if(e.target.nodeName=="UL"){
+    $(e.target).css("display","block");
+    e.target.previousElementSibling.className="change";
+  }
+  if(e.target.nodeName=="A"){
+    $(e.target).parent().parent().css("display","block");
+    e.target.parentNode.parentNode.previousElementSibling.className="change";
+  }
+},function(e){
+  //console.log(e.target);
+  if(e.target.nodeName=="UL"){
+    $(e.target).slideUp();
+    e.target.previousElementSibling.className="";
+  }
+  if(e.target.nodeName=="A"){
+    $(e.target).parent().parent().slideUp();
+    e.target.parentNode.parentNode.previousElementSibling.className="";
+  }
+});
+$("ul#top_nav>li>a").hover(function(e){
+  //$(e.target).siblings("ul").slideDown();
+  e.target.className="change";
+},function(e){
+  //$(e.target).siblings("ul").slideUp();
+  e.target.className="";
+});
+$("ul#login_area>li.cart").hover(function(e){
+  $("#shopcart").slideDown();
+},function(e){
+  $("#shopcart").slideUp();
+});
+/***************top头部完成**************/
+/************购物车隐藏与显示**********/
+$("ul.mt_nav").hover(function(e){
+
+  $("ul.mt_nav>li:not(.last_nav)>a").hover(function(e){
+    var index=$("ul.mt_nav>li>a").index(this);
+    //console.log(index);
+    $('div.slide').slideDown();
+    $("div.slide>div.sub_nav").eq(index).css('display','block').
+      siblings().css('display','none');
+  });
+},function(e){
+  $("div.slide").hover(function(){
+    $("div.slide").css("display","block");
+  },function(e){
+    $("div.slide").slideUp();
+  });
+  $("div.slide").css("display","none");
+});
+$('ul.mt_nav>li.last_nav').hover(function(){
+  $('div.slide').slideUp();
+});

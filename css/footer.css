@@ -1,0 +1,148 @@
+/*footer*/
+div.footer{
+  background:#f8f8f8;
+  padding:20px 0;
+}
+div.wrapper{
+  width:1200px;
+  margin:0 auto;
+
+}
+div.partner{
+  padding:6px 0 13px;
+  border-bottom: #e5e5e5 1px solid;
+}
+ul.links{
+  overflow:hidden;
+}
+ul.links>li.link_item{
+  height:20px;
+  line-height:20px;
+  float:left;
+  color:#5e5e5e;
+  font-size:12px;
+}
+ul.links>li.sep{
+  width:1px;
+  background:#d3d3d3;
+  height:10px;
+  margin:6px 7px 0;
+  float:left;
+  display:inline;
+}
+ul.links>li.link_item>a{
+  color:#5e5e5e;
+  text-decoration:none;
+}
+ul.links>li.mm{
+  margin-left:20px;
+}
+ul.links>li.mm>a{
+  color:#5e5e5e;
+  text-decoration:none;
+}
+ul.links>li.mm>a>em{
+  font-style:normal;
+}
+div.kxwz_logo{
+  padding-top:18px;
+  padding-bottom:20px;
+  float:right;
+}
+div.kxwz_logo>a{
+  overflow:hidden;
+}
+div.kxwz_logo>a>img{
+  height:42px;
+  border-radius:3px;
+}
+div.mt_copyright{
+  padding:15px 0 0 144px;
+  position:relative;
+  overflow:hidden;
+}
+div.mt_copyright>a{
+  width:124px;
+  height:31px;
+  position:absolute;
+  left:0;
+  top:17px;
+
+  background: url(../images/logo-single.png) top left no-repeat;
+}
+div.mt_copyright>p.copyright_info{
+  color:#b6b6b6;
+  font-size:12px;
+  line-height:20px;
+}
+div.mt_copyright>p.copyright_info>a{
+  color:#a6a6a6;
+  text-decoration:none;
+}
+/*右侧固定的客服服务*/
+div.tool_bar{
+  opacity:0.7;
+  position:fixed;
+  right:30px;
+  top:150px;
+  z-index:100;
+  width:50px;
+}
+div.box1{
+  box-shadow: 0 0 3px rgba(0,0,0,.15);
+}
+div.tool_bar a.item_service{
+  width:50px;
+  height:40px;
+  background:#fff;
+  display:block;
+  position:relative;
+  padding:5px 0;
+}
+div.tool_bar a.item_service>span{
+  width:40px;
+  height:40px;
+  display:block;
+  background:url(../images/item_service.png) no-repeat top left;
+  margin:0 auto;
+  cursor:pointer;
+}
+div.tool_bar a.goto_top{
+  margin-top:5px;
+  box-shadow: 0 0 3px rgba(0,0,0,.15);
+}
+div.tool_bar a.item_service>span.code_service{
+  background:url(../images/item_service.png) no-repeat 0 -40px;
+}
+div.tool_bar a.item_service>span.to_top{
+  background:url(../images/item_service.png) no-repeat 0 -80px;
+}
+div.tool_bar a.item_service:hover>span.qq_service{
+  background:url(../images/item_service.png) no-repeat -40px 0;
+}
+div.tool_bar a.item_service:hover>span.code_service{
+  background:url(../images/item_service.png) no-repeat -40px -40px;
+}
+div.tool_bar a.item_service:hover>span.to_top{
+  background:url(../images/item_service.png) no-repeat -40px -80px;
+}
+div.qr_code{
+  color:#636363;
+  position:absolute;
+  top:-50px;
+  right:52px;
+  padding:10px;
+  background:#fff;
+  height:135px;
+  box-shadow: 0 0 3px rgba(0,0,0,.15);
+  z-index:100;
+  display:none;
+}
+div.qr_code>img{
+  width:110px;
+  display:block;
+  border:0;
+}
+div.qr_code>p{
+  color:#636363;
+}

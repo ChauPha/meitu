@@ -1,0 +1,99 @@
+
+<!--header-->
+<div class="p_header" ng-controller="detailCtrl">
+    <div class="p_wrapper">
+        <div class="mt_logo">
+            <div class="logo_link">
+                <a href="#/main"><img src="images/phone_logo.png" /></a>
+                <i class="light">
+
+                </i>
+            </div>
+        </div>
+        <h2 class="mt_heading">
+            <i class="sep"></i>
+            选择型号
+        </h2>
+        <ul class="top_link">
+            <li class="top_item top_action" ng-controller="loginCtrl" >
+                <a href="#/login" class="login">登录</a>
+                <span class="line"></span>
+                <a href="#/register" class="login">注册</a>
+            </li>
+            <li class="top_item">
+                <a href="#/shopcart" class="goto_cart">
+                    <em>{{count}}</em><span>购物车</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--main-->
+<div class="p_main" ng-controller="phoneCtrl">
+    <div class="box">
+        <div class="box_bg">
+            <div class="spec">
+                <h4 class="spec_title">
+                    <a href="#/phone/{{phoneList[0].phone_id}}"><span>了解产品</span>&gt;&gt;</a>购买{{phoneList[0].phone_name}}
+                </h4>
+                <dl class="spec_select">
+                    <dt class="spec_select_dt">机型 </dt>
+                    <dd class="spec_select_dd">
+                        <ul class="spec_list">
+                            <li class="spec_item">
+                                <p class="name">{{phoneList[0].phone_type}}</p>
+                                <p class="info">{{phoneList[0].phone_content}}</p>
+                                <p class="info">￥ <span>{{phoneList[0].phone_price}}</span></p>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="spec_select">
+                    <dt class="spec_select_dt">颜色</dt>
+                    <dd class="spec_select_dd">
+                        <ul class="spec_list">
+                            <li class="spec_item">
+                                <i class="icon icon_white"></i>
+                                <p class="color">{{phoneList[0].phone_color}}</p>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <div class="extra">
+                    <div class="extra_issurance">
+                        <input type="checkbox" class="check"/>
+                        <div class="title">
+                            碎屏保一年
+                            <span class="text">￥109.00元</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fix">
+                    <div class="fix_submit">
+                        <dl>
+                            <dt><h3>{{phoneList[0].phone_name}}</h3></dt>
+                            <dd>
+                                <a href="#" class="btn_submit">抢购提醒</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="figure">
+                <img src="img/{{phoneList[0].phone_image}}" />
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="box_bg">
+            <div class="detail">
+                <h4 class="detail_title">包装详情</h4>
+                <img src="images/phone_M6_detail_01.jpg" class="detail_figure"/>
+                <img src="images/phone_M6_detail_02.jpg" />
+            </div>
+
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div ng-include="'html/include/footer.html'"></div>

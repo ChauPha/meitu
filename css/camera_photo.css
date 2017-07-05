@@ -1,0 +1,43 @@
+/*header*/
+div.cp_header{
+  background: url(../images/camera_header.jpg) 50% 0 no-repeat;
+  height: 648px;
+  position: relative;
+}
+div.camera_photo_lt{
+  background: url(../images/camera_photo_01.png) no-repeat;
+  width: 361px;
+  height: 298px;
+  left: 50%;
+  top: 168px;
+  margin-left: -142px;
+  position:absolute;
+}
+div.camera_photo_rt{
+  background: url(../images/camera_photo_02.png) no-repeat;
+  width: 327px;
+  height: 272px;
+  left: 50%;
+  top: 163px;
+  margin-left: 238px;
+  position:absolute;
+}
+/*main*/
+div.camera_heading{
+  height: 116px;
+  line-height: 144px;
+  text-align: center;
+  color: #333;
+  font-size: 36px;
+}
+ul.thumb{
+  width: 1180px;
+  margin: 0 auto;
+  overflow:hidden;
+}
+li.thumb_item{
+  float:left;
+}
+div.thumb_box{
+  padding:5px;
+}

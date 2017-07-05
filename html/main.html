@@ -1,0 +1,445 @@
+
+<div ng-include="'html/include/header.html'"></div>
+<!--header部分-->
+<div id="header">
+    <div id="slider">
+        <ul class="list">
+            <li class="active"><a href="#"><img src="images/slider1.jpg"/></a></li>
+            <li><a href="#/mian"><img src="images/slider2.jpg"/></a></li>
+            <li><a href="#/main"><img src="images/slider3.jpg"/></a></li>
+            <li><a href="#/main"><img src="images/slider4.jpg"/></a></li>
+            <li><a href="#/main"><img src="images/slider5.jpg"/></a></li>
+        </ul>
+        <div class="flex">
+            <ol>
+                <li><a href="#/main" class="active">1</a></li>
+                <li><a href="#/main" class>2</a></li>
+                <li><a href="#/main" class>3</a></li>
+                <li><a href="#/main" class>4</a></li>
+                <li><a href="#/main" class>5</a></li>
+            </ol>
+        </div>
+        <div class="ext">
+            <div class="category">
+                <div class="category_back"></div>
+                <ul class="category_nav">
+                    <li><h3 class="title"><a href="#/phone_show">手机</a></h3>
+                        <div class="text"><a href="#">美图M6</a><a href="#">美图V4S</a></div></li>
+                    <li><h3 class="title"><a href="#/camera">相机</a></h3>
+                        <div class="text"><a href="#/camera">美图BF1</a></div></li>
+                    <li><h3 class="title"><a href="#/parts_show/常规配件/all">常规配件</a></h3>
+                        <div class="text"><a href="#/parts_show/all/贴膜">贴膜</a>
+                            <a href="#/parts_show/all/耳机">耳机</a><a href="#/parts_show/all/手机壳">手机壳</a></div></li>
+                    <li><h3 class="title"><a href="#/parts_show/拍摄配件/all">拍摄配件</a></h3>
+                        <div class="text"><a href="#/parts_show/all/自拍架">自拍架</a><a href="#/parts_show/all/遥控器">遥控器</a><a href="#/parts_show/all/补妆灯">补妆灯</a></div></li>
+                    <li><h3 class="title"><a href="#/parts_show/生活方式/all">生活方式</a></h3>
+                        <div class="text"><a href="#/parts_show/all/生活周边">生活周边</a><a href="#/parts_show/all/T恤">T恤</a></div></li>
+                    <li class="last_nav"><h3 class="title"><a href="#/main">企业团购</a></h3>
+                        <div class="text"></div></li>
+                    <li class="last_nav"><h3 class="title"><a href="#/main">线下体验点</a></h3>
+                        <div class="text"></div></li>
+                </ul>
+            </div>
+            <div class="category_all">
+                <div class="cateSub">
+                    <ul class="clearfix" ng-controller="psCtrl">
+                        <li ng-repeat="item in phoneList"><a href="#/phone/{{item.phone_id}}"><img src="img/{{item.phone_s_image}}"/>
+                            <div class="category_name"><span>{{item.phone_name}}</span></div></a></li>
+
+                    </ul>
+                </div>
+                <div class="cateSub">
+                    <ul class="clearfix">
+                        <li><a href="#/camera"><img src="images/mt_good2_1.jpg"/>
+                            <div class="category_name"><span>美图BF1</span></div></a></li>
+                    </ul>
+                </div>
+                <div class="cateSub">
+                    <ul class="clearfix" ng-controller="nmpCtrl">
+                        <li ng-repeat="item in npList">
+                            <a href="#/parts_detail/{{item.np_id}}"><img src="img/{{item.np_s_image}}"/>
+                            <div class="category_name"><span>{{item.np_name}}</span></div></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cateSub">
+                    <ul class="clearfix" ng-controller="shootCtrl">
+                        <li ng-repeat="item in npList">
+                            <a href="#/parts_detail/{{item.np_id}}"><img src="img/{{item.np_s_image}}"/>
+                                <div class="category_name"><span>{{item.np_name}}</span></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cateSub">
+                    <ul class="clearfix" ng-controller="lsCtrl">
+                        <li ng-repeat="item in npList">
+                            <a href="#/parts_detail/{{item.np_id}}"><img src="img/{{item.np_s_image}}"/>
+                            <div class="category_name"><span>{{item.np_name}}</span></div></a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--main主体部分-->
+<div id="main">
+    <div class="promo">
+        <ul class="promo_list">
+            <li><a href="#/main"><img src="images/promo_list1.jpg"/></a></li>
+            <li><a href="#/main"><img src="images/promo_list2.jpg"/></a></li>
+            <li><a href="#/main"><img src="images/promo_list3.jpg"/></a></li>
+        </ul>
+    </div>
+    <!--手机层-->
+    <div class="box">
+        <div class="box_hd">
+            <a href="#/phone_show" class="more">更多<em>&gt;</em></a>
+            <h2 class="title">手机</h2>
+        </div>
+        <div class="box_bd">
+            <div class="brick">
+                <div class="brick_promo">
+                    <a href="#/main"><img src="images/phone_floor.jpg"/></a>
+                </div>
+                <div class="birck_box">
+                    <ul class="brick_list" ng-controller="psCtrl">
+                        <li ng-repeat="item in phoneList">
+                            <a href="#/phone/{{item.phone_id}}" class="brick_link">
+                                <img src="img/{{item.phone_s_image}}"/>
+                                <span class="brick_name">{{item.phone_name}}</span>
+                                <span class="brick_desc">{{item.phone_title}}</span>
+                                <span class="brick_price">￥{{item.phone_price}}起</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--配件层-->
+    <div class="box">
+        <div class="box_hd">
+            <a href="#/parts_show/all/all" class="more">更多<em>&gt;</em></a>
+            <h2 class="title">配件</h2>
+        </div>
+        <div class="box_bd">
+            <div class="brick">
+                <div class="brick_promo">
+                    <a href="#/main"><img src="images/peijian.jpg"/></a>
+
+                </div>
+                <div class="birck_box">
+                    <ul class="brick_list" ng-controller="npCtrl">
+                        <li ng-repeat="item in npList">
+                            <a href="#/parts_detail/{{item.np_id}}" class="brick_link">
+                                <img src="img/{{item.np_s_image}}"/>
+                                <span class="brick_name">{{item.np_name}}</span>
+                                <span class="brick_desc">{{item.np_title}}</span>
+                                <span class="brick_price">￥{{item.np_price}}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="box_bd">
+            <div class="brick">
+                <div class="brick_promo">
+                    <a href="#/main"><img src="images/peijian_move.jpg"/></a>
+                </div>
+                <div class="birck_box">
+                    <ul class="brick_list" ng-controller="npCtrl">
+                        <li ng-repeat="(key,item) in npList" ng-if="key>3">
+                            <a href="#/parts_detail/{{item.np_id}}" class="brick_link">
+                                <img src="img/{{item.np_s_image}}"/>
+                                <span class="brick_name">{{item.np_name}}</span>
+                                <span class="brick_desc">{{item.np_title}}</span>
+                                <span class="brick_price">￥{{item.np_price}}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--生活方式层-->
+    <div class="box">
+        <div class="box_hd">
+            <a href="#/parts_show/生活方式/all" class="more">更多<em>&gt;</em></a>
+            <h2 class="title">生活方式</h2>
+        </div>
+        <div class="box_bd">
+            <div class="brick">
+                <div class="brick_promo">
+                    <a href="#/main"><img src="images/lifestyle.jpg"/></a>
+
+                </div>
+                <div class="birck_box">
+                    <ul class="brick_list" ng-controller="lsCtrl">
+                        <li ng-repeat="item in npList">
+                            <a href="#/parts_detail/{{item.np_id}}" class="brick_link">
+                                <img src="img/{{item.np_s_image}}"/>
+                                <span class="brick_name">{{item.np_name}}</span>
+                                <span class="brick_desc">{{item.np_title}}</span>
+                                <span class="brick_price">￥{{item.np_price}}</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="box_bd">
+            <div class="brick">
+                <div class="brick_promo">
+                    <a href="#/main"><img src="images/lifestyle_green.jpg"/></a>
+                </div>
+                <div class="birck_box">
+                    <ul class="brick_list" ng-controller="lsCtrl">
+                        <li ng-repeat="(key,item) in npList" ng-if="key>3" >
+                            <a href="#/parts_detail/{{item.np_id}}" class="brick_link">
+                                <img src="img/{{item.np_s_image}}"/>
+                                <span class="brick_name">{{item.np_name}}</span>
+                                <span class="brick_desc">{{item.np_title}}</span>
+                                <span class="brick_price">￥{{item.np_price}}</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--美图APP层-->
+    <div class="box">
+        <div class="box_hd">
+            <a href="#/main" class="more">更多<em>&gt;</em></a>
+            <h2 class="title">美图APP</h2>
+        </div>
+        <div class="box_eb">
+            <div class="card">
+                <div class="card_box">
+
+                    <ul class="card_list">
+                        <li>
+                            <a href="#/main">
+                                <img src="images/card_image1.png"/>
+                                <span class="card_name">美图秀秀</span>
+                                <span class="card_desc">中国最流行的图片处理软件</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/main">
+                                <img src="images/card_image2.png"/>
+                                <span class="card_name">美拍</span>
+                                <span class="card_desc">高颜值手机直播 <br/>超火爆原创视频</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/main">
+                                <img src="images/card_image3.png"/>
+                                <span class="card_name">美颜相机</span>
+                                <span class="card_desc">看见更美的自己</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/main">
+                                <img src="images/card_image4.png"/>
+                                <span class="card_name">海报工厂</span>
+                                <span class="card_desc">照片瞬间高大上</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/main">
+                                <img src="images/card_image5.png" />
+                                <span class="card_name">潮自拍</span>
+                                <span class="card_desc">有电影质感的自拍神器</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/main">
+                                <img src="images/card_image6.png" />
+                                <span class="card_name">美妆相机</span>
+                                <span class="card_desc">效果最好的美妆神器</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/main">
+                                <img src="images/card_image7.png" />
+                                <span class="card_name">万能相机</span>
+                                <span class="card_desc">你只需要一个相机App</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/main">
+                                <img src="images/card_image8.png"/>
+                                <span class="card_name">柚子相机</span>
+                                <span class="card_desc">人人都是摄影师</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+                <a href="#/main" class="prev">&lt;</a>
+                <a href="#/main" class="next">&gt;</a>
+            </div>
+        </div>
+    </div>
+    <!--服务层service-->
+    <div class="service">
+        <div class="wrapper">
+            <div class="service_list">
+                <ul class="s_list">
+                    <li>
+                        <a href="#/main">
+                            <i class="service_icon1"></i>
+                            <h5 class="service_title">正品保障</h5>
+                            <p class="service_text">放心安全支付</p>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="#/main">
+                            <i class="service_icon2"></i>
+                            <h5 class="service_title">7天退货</h5>
+                            <p class="service_text">15天超长换货保障</p>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="#/main">
+                            <i class="service_icon3"></i>
+                            <h5 class="service_title">顺丰高效物流</h5>
+                            <p class="service_text">全国主要城市3天即达</p>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="#/main">
+                            <i class="service_icon4"></i>
+                            <h5 class="service_title">139家售后网点</h5>
+                            <p class="service_text">139家售后网点遍布全国</p>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--指导层guide-->
+    <div class="guide">
+        <div class="contact">
+            <div class="contact_tel">
+                <i class="contact_icon1"></i>
+                <h4 class="contact_num">400-990-9696</h4>
+                <p class="contact_time">周一至周日9:00-24:00</p>
+            </div>
+            <a href="#/main" class="contact_qq"></a>
+        </div>
+        <div class="guide_list">
+            <dl class="guide_dl">
+                <dt class="guide_dt">美图手机</dt>
+                <dd class="guide_dd">
+                    <a href="#/main">美图M6</a>
+                </dd>
+                <dd class="guide_dd">
+                    <a href="#/main">美图V4S</a>
+                </dd>
+            </dl>
+            <dl class="guide_dl">
+                <dt class="guide_dt">购物指南</dt>
+                <dd class="guide_dd">
+                    <a href="#/main">支付方式</a>
+                </dd>
+                <dd class="guide_dd">
+                    <a href="#/main">订单相关</a>
+                </dd>
+                <dd class="guide_dd">
+                    <a href="#/main">购物常见问题</a>
+                </dd>
+                <dd class="guide_dd">
+                    <a href="#/main">美图M6常见问题</a>
+                </dd>
+            </dl>
+            <dl class="guide_dl">
+                <dt class="guide_dt">配送方式</dt>
+                <dd class="guide_dd">
+                    <a href="#/main">配送说明</a>
+                </dd>
+                <dd class="guide_dd">
+                    <a href="#/main">签收需知</a>
+                </dd>
+                <dd class="guide_dd">
+                    <a href="#/main">配送常见问题</a>
+                </dd>
+            </dl>
+            <dl class="guide_dl">
+                <dt class="guide_dt">售后服务</dt>
+                <dd class="guide_dd">
+                    <a href="#/main">维修流程</a>
+                </dd>
+                <dd class="guide_dd">
+                    <a href="#/main">退换货流程</a>
+                </dd>
+                <dd class="guide_dd">
+                    <a href="#/main">售后服务政策</a>
+                </dd>
+                <dd class="guide_dd">
+                    <a href="#/main">网点查询</a>
+                </dd>
+            </dl>
+            <dl class="guide_dl">
+                <dt class="guide_dt">关于美图</dt>
+                <dd class="guide_dd">
+                    <a href="#/main">美图公司简介</a>
+                </dd>
+                <dd class="guide_dd">
+                    <a href="#/main">加入美图</a>
+                </dd>
+                <dd class="guide_dd">
+                    <a href="#/main">联系我们</a>
+                </dd>
+                <dd class="guide_dd">
+                    <a href="#/main">留言反馈</a>
+                </dd>
+            </dl>
+            <dl class="guide_dl">
+                <dt class="guide_dt">关注我们</dt>
+                <dd class="guide_dd">
+                    <a href="#/main">新浪微博</a>
+                </dd>
+                <dd class="guide_dd">
+                    <a href="#/main">官方微信</a>
+                </dd>
+                <dd class="guide_dd">
+                    <a href="#/main">美图动态</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<!--右侧固定的客服服务-->
+<div class="tool_bar">
+    <div class="box1">
+        <a href="#/main" class="item_service"><span class="qq_service"></span></a>
+        <a href="#/main" class="item_service active">
+            <span class="code_service active"></span>
+            <div class="qr_code">
+                <img src="images/code.jpg"/>
+                <p>关注美图手机公众号</p>
+            </div>
+        </a>
+        <a href="#/main" class="item_service goto_top"><span class="to_top"></span></a>
+    </div>
+</div>
+<div ng-include="'html/include/footer.html'"></div>
+<script src="js/homepage.js"></script>

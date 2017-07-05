@@ -1,0 +1,253 @@
+/*header*/
+
+div.cart_header{
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  z-index: 11;
+  background:#F8F8F8;
+}
+div.cart_wrapper{
+  width:1200px;
+  margin:0 auto;
+  overflow:hidden;
+}
+a.shopcart_link{
+  color: #666;
+  float: left;
+  text-decoration:none;
+}
+span.shopcart_sep{
+  height: 50px;
+  line-height: 52px;
+  overflow: hidden;
+  padding: 0 12px;
+  color: #999;
+  float:left;
+}
+div.shopcart_name{
+  color: #000;
+  float:left;
+}
+/*main*/
+div.cart_main{
+  background:#f8F8F8;
+}
+div.main_content{
+  width:1200px;
+  margin:0 auto;
+  overflow:hidden;
+
+}
+div.shopcart_box{
+  min-height: 300px;
+  overflow: visible;
+  background: #fff;
+  position: relative;
+}
+div.cart_content{
+  padding:40px;
+}
+table.cart_table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width:100%;
+}
+table.cart_table thead{
+  vertical-align:middle;
+}
+th.cart_th{
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  font-weight: 700;
+  color: #333;
+  font-size: 14px;
+  border-bottom: #ddd 1px solid;
+}
+th.cart_th>label.cart_all{
+  float:left;
+}
+th.cart_th>p{
+  text-align:left;
+}
+label.cart_all>input{
+  width: 13px;
+  height: 13px;
+  float: left;
+  margin: 11px 5px 0 26px;
+  outline:0;
+}
+tr{
+  border-bottom:1px solid #ddd;
+}
+/*label.cart_all>p{*/
+  /*padding-left: 26px;*/
+  /*text-align: left;*/
+/*}*/
+tbody{
+  vertical-align:middle;
+}
+td.cart_td{
+  height: 114px;
+  border-bottom: #ebebeb 1px solid;
+  text-align: center;
+  display:table-cell;
+}
+
+label.cart_label{
+  height: 13px;
+  float: left;
+  padding-left: 26px;
+}
+div.cart_info{
+  padding-left: 125px;
+  text-align: left;
+  display: block;
+  position: relative;
+
+}
+ img.cart_img{
+  width: 90px;
+  height: 90px;
+  float: left;
+  display: inline;
+  margin-left: -127px;
+}
+div.cart_info>p>a{
+  font-size: 16px;
+  color: #333;
+  line-height: 28px;
+  padding-top: 16px;
+  display: block;
+  overflow:hidden;
+}
+div.cart_spec{
+  color: #8b8b8b;
+  font-size: 14px;
+  height:20px;
+  margin-top: 5px;
+  overflow: visible;
+  position: relative;
+  display: inline;
+}
+div.cart_spec>span{
+  width:100px;
+  display:inline-block;
+}
+i{
+  font-style:normal;
+}
+div.cart_price{
+  text-align: center;
+  width:100%;
+  font-size: 16px;
+  color: #666;
+  margin:0 auto;
+  padding-right: 5px;
+}
+/*div.cart_number{*/
+  /*width: 20px;*/
+  /*height: 18px;*/
+  /*padding: 0 18px;*/
+  /*margin:0 auto;*/
+/*}*/
+div.cart1_number{
+
+  padding:0 75px;
+  height:18px;
+  width:100px;
+  text-align:center;
+  margin:0 auto;
+}
+span.pluson,span.reduce{
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  display: inline;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  color: #999;
+  border-radius:9px;
+  float: left;
+
+  border:1px solid #ddd;
+}
+
+span.number{
+  width:30px;
+  height: 18px;
+  line-height: 18px;
+  color: #777;
+
+  text-align: center;
+  font-size: 12px;
+  margin:0 5px;
+  float:left;
+}
+p.cart_total{
+  color: #e92076;
+  text-align: center;
+  font-size: 16px;
+  padding-right: 5px;
+}
+a.cart_remove{
+  color: #b2b2b2;
+  font-size: 16px;
+  display: block;
+  text-align: center;
+}
+div.cart_account{
+  height:100px;
+}
+div.cart_sum{
+  float:right;
+}
+div.cart_fixed{
+  background: #f8f8f8;
+  width: 100%;
+  border-top: #e6e6e6 1px solid;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 111;
+  padding: 25px 0;
+  overflow: hidden;
+  margin-top: 10px;
+}
+div.cart_total{
+  height:50px;
+  line-height:50px;float:right;
+}
+p.cart_info{
+  font-size: 14px;
+  height: 50px;
+  line-height:50px;
+  color: #555;
+  float: left;
+  margin-right: 50px;
+}
+span.totalNum{
+  color:#e92076;
+  font-size:18px;
+}
+span.totalPrice{
+  color: #e92076;
+  font-size: 20px;
+  position: relative;
+  top: 1px;
+}
+a.shopcart_btn{
+  background: #e92076;
+  width: 178px;
+  height: 50px;
+  line-height: 50px;
+  float: right;
+  text-align: center;
+  color: #fff;
+  margin-left:30px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  vertical-align:middle;
+}

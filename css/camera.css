@@ -1,0 +1,71 @@
+/*header*/
+div.c_header{
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  z-index: 11;
+  background:#F8F8F8;
+}
+div.theme,div.main{
+  width: 1200px;
+  margin:0 auto;
+}
+a.link_home{
+  color: #666;
+  float: left;
+}
+span.link_to{
+  height: 50px;
+  line-height: 52px;
+  overflow: hidden;
+  padding: 0 12px;
+  color: #999;
+  float:left;
+}
+span.link_des{
+  color:#000;
+  float:left;
+}
+/*main*/
+div.c_main{
+  margin:0 auto;
+  width:1200px;
+}
+div.camera_box{
+  position:relative;
+}
+ul.camera_box{
+  margin-right: -20px;
+  overflow:hidden;
+}
+li.camera_box {
+  background: #fff;
+  width: 593px;
+  height: 360px;
+  float: left;
+  margin: 0 14px 14px 0;
+  position: relative;
+  overflow: hidden;
+}
+a.camera_link:hover{
+  transform:translateX(10px);
+}
+a.camera_link{
+  transition: transform .5s ease-out;
+  height: 360px;
+  padding: 0 36px 0 360px;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  line-height: 30px;
+  font-size: 0;
+  position: relative;
+}
+a.camera_link>img{
+  transition: -webkit-transform .5s;
+  width: 593px;
+  height: 360px;
+  float: left;
+  display: inline;
+  margin-left: -360px;
+}

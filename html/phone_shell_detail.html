@@ -1,0 +1,147 @@
+<div ng-include="'html/include/header.html'"></div>
+<!--header-->
+<div class="psd_header">
+    <div class="content" ng-controller="detailCtrl">
+        <a href="#/main" class="crumb_link">首页</a>
+        <span class="crumb_sep">&gt;</span>
+        <a href="#/parts_show/{{dtList[0].np_cate}}/all" class="crumb_link">{{dtList[0].np_cate}}</a>
+        <span class="crumb_sep">&gt;</span>
+        <a href="#/parts_show/all/{{dtList[0].np_type}}" class="crumb_link">{{dtList[0].np_type}}</a>
+        <span class="crumb_sep">&gt;</span>
+        <a href="#/parts_detail/{{dtList[0].np_id}}" class="crumb_link">{{dtList[0].np_name}}</a>
+
+    </div>
+</div>
+
+<!--main-->
+<div class="psd_main" ng-controller="detailCtrl">
+    <div class="shell_show">
+        <div class="psd_wrapper">
+            <div class="goods_detail">
+                <h1 class="detail_title">{{dtList[0].np_name}}</h1>
+                <div class="adapter">
+                    <span>适配机型</span>
+                    <span><a href="#">美图M6</a></span>
+                </div>
+                <div class="detail_price">
+                        <span class="price">
+                            <span>价格</span>
+                            <span>￥{{dtList[0].np_price}}</span>
+                        </span>
+                        <span class="fee">
+                            <i class="arrow"></i>
+                            免邮
+                        </span>
+                </div>
+                <div class="detail_types">
+                    <span class="del_type">请选择型号</span>
+                    <span class="dt_type">型号</span>
+                        <span class="dd_cate">
+                            <a href="#/parts_detail/{{dtList[0].np_id}}" ng-repeat="item in ptList"
+                                    ng-click="selType(item.pt_image,item.pt_id,$index)"><img src="img/{{item.pt_image}}"/></a>
+                        </span>
+                </div>
+                <div class="detail_count">
+                    <span class="dt_count">数量</span>
+                        <span class="dd_cate">
+                          <div class="number">
+                              <span class="plus" ng-click="plus()">+</span>
+                              <span class="cut" ng-click="reduce()">-</span>
+                              <span class="num">{{num}}</span>
+                          </div>
+                        </span>
+                </div>
+                <ul class="extra">
+                    <li class="extra_item">
+                        <i class="extra_icon extra_i1"></i>
+                        正品保障
+                    </li>
+                    <li class="extra_item">
+                        <i class="extra_icon extra_i2"></i>
+                        全国联保
+                    </li>
+                    <li class="extra_item">
+                        <i class="extra_icon extra_i3"></i>
+                        无忧退换货
+                    </li>
+                </ul>
+                <div class="btn_area">
+                    <a href="#/parts_detail/{{dtList[0].np_id}}" class="btn btn_lt"
+                            ng-click="addCart()">加入购物车</a>
+                    <a  class="btn btn_rt" ng-click="buy()">立即购买</a>
+                </div>
+            </div>
+            <div class="thumb">
+                <div class="thumb_view">
+                    <img src="img/{{bigImg}}"  class="thumb_view_img"/>
+                    <img src="img/{{bigImg}}"  class="thumb_view_lg_img"/>
+                </div>
+                <ul class="thumb_nav">
+                    <li class="thumb_nav_item" ng-repeat="item in imgList" >
+                        <img src="img/{{item.img_small}}" class="thumb_nav_img" ng-click="getImg(item.img_small,$index)"/>
+                    </li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </div>
+    <div class="detail_nav">
+        <div class="nav_wrapper">
+            <a href="#/main" class="goods_tab_lt">商品详情</a>
+            <a href="#/main" class="goods_tab_rt">规格参数</a>
+        </div>
+    </div>
+    <div class="goods_view">
+        <div class="goods_show">
+            <img src="images/detail_img_01.jpg" alt=""/>
+            <img src="images/detail_img_02.jpg" alt=""/>
+            <img src="images/detail_img_03.jpg" alt=""/>
+            <img src="images/detail_img_04.jpg" alt=""/>
+            <img src="images/detail_img_05.jpg" alt=""/>
+        </div>
+    </div>
+</div>
+<div class="modal">
+    <div class="modal_content">
+        <div class="login_rt">
+            <div class="form_login">
+                <div class="login_content">
+                    <h3>美图帐号登录</h3>
+                    <div class="login_phone" id="userPhone">
+                        <input type="text" placeholder="邮箱/手机号码" class="input_info"/>
+                        <div class="tips">
+                        </div>
+                    </div>
+
+                    <div class="login_phone" id="userPwd">
+                        <input type="text" placeholder="密码" class="input_info"/>
+                        <div class="tips">
+                        </div>
+                    </div>
+                    <div class="login_agree">
+                        <span class="agree_lt"><input type="checkbox"/>两天内自动登录</span>
+                        <a href="#/login" class="agree_rt">忘记密码？</a>
+                    </div>
+                    <div class="login_btn">
+                        <span>登录</span>
+                    </div>
+
+                </div>
+                <div class="login_other">
+                    或使用 其他方式登录 <br/>
+                    <p>
+                        <a href="#/login"><i class="icon icon_sina"></i></a>
+                        <a href="#/login"><i class="icon icon_qq"></i></a>
+                        <a href="#/login"><i class="icon icon_alipay"></i></a>
+                    </p>
+                </div>
+            </div>
+            <div class="guide">
+                还没有美图帐号？<a href="#/register">立即注册</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include="'html/include/footer.html'"></div>
+

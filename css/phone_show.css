@@ -1,0 +1,90 @@
+/*header*/
+div.p_s_header{
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  z-index: 11;
+  background:#F8F8F8;
+}
+div.theme,div.p_s_main{
+  width: 1200px;
+  margin:0 auto;
+}
+a.link_home{
+  color: #666;
+  float: left;
+}
+span.link_to{
+  height: 50px;
+  line-height: 52px;
+  overflow: hidden;
+  padding: 0 12px;
+  color: #999;
+  float:left;
+}
+span.link_des{
+  color:#000;
+  float:left;
+}
+/*main*/
+
+div.phone_box{
+  position:relative;
+}
+ul.phone_list{
+  margin-right:-20px;
+  overflow:hidden;
+}
+li.phone_item{
+  background: #fff;
+  width: 593px;
+  height: 360px;
+  float: left;
+  margin: 0 14px 14px 0;
+  position: relative;
+  overflow: hidden;
+}
+ul.phone_list>li:hover img{
+  transform:translateX(10px);
+}
+a.phone_link{
+  height: 360px;
+  padding: 0 36px 0 360px;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  line-height: 30px;
+  font-size: 0;
+  position: relative;
+  text-decoration: none;
+}
+img.phone_img{
+  transition: -webkit-transform .5s;
+  width: 360px;
+  height: 360px;
+  float: left;
+  display: inline;
+  margin-left: -360px;
+}
+h2.phone_title{
+  font-size: 20px;
+  color: #333;
+  font-weight: 500;
+  padding-top: 130px;
+  line-height: 28px;
+  position:relative;
+  z-index:11;
+}
+p.phone_desc{
+  font-size: 16px;
+  color: #999;
+  position:relative;
+  z-index:11;
+}
+p.phone_price{
+  font-size: 20px;
+  color: #e92076;
+  padding-top: 8px;
+  position:relative;
+  z-index:11;
+}

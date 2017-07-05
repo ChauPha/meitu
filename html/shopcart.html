@@ -1,0 +1,133 @@
+<div ng-include="'html/include/header.html'"></div>
+<!--header-->
+<div class="cart_header">
+    <div class="cart_wrapper">
+        <a href="#/main" class="shopcart_link">首页</a>
+        <span class="shopcart_sep">&gt;</span>
+        <span class="shopcart_name">购物车</span>
+    </div>
+
+</div>
+<!--main-->
+<div class="cart_main" ng-controller="parentCtrl">
+    <div class="main_content">
+    <div class="shopcart_box">
+        <div class="cart_content">
+            <table class="cart_table">
+                <thead>
+                <tr>
+                    <th class="cart_th" width="10%">
+                        <label class="cart_all"><input type="checkbox" ng-checked="check" ng-click="selAll()"/>全选</label>
+                    </th>
+                    <th class="cart_th" width="40%">
+                        <p>商品信息</p>
+                    </th>
+                    <th class="cart_th" width="10%">单价(元)</th>
+                    <th class="cart_th" width="15%">数量</th>
+                    <th class="cart_th" width="10%">小计(元)</th>
+                    <th class="cart_th" >操作</th>
+                </tr>
+
+                </thead>
+                <tbody ng-controller="detailCtrl">
+                <tr ng-repeat="item in cartList">
+                    <td class="cart_td">
+                        <label  class="cart_label">
+                            <input type="checkbox" ng-click="selOnce(item.cart_count*item.cart_price,$index)"/></label>
+
+                        </td>
+                    <td class="cart_td show_img">
+                        <div class="cart_info">
+                            <a><img src="img/{{item.cart_image}}" class="cart_img"/></a>
+
+                            <p><a >{{item.cart_name}}</a></p>
+                            <div class="cart_spec">
+                                <span>规格：<i>{{item.cart_norms}}</i></span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="cart_td">
+                        <div class="cart_price">
+                            <p><i>{{item.cart_price}}</i></p>
+                        </div>
+                    </td>
+                    <td class="cart_td">
+                        <div class="cart1_number">
+                            <span class="reduce" ng-click="reduceCart(item.cart_id,-1)">-</span>
+                            <span class="number" >{{item.cart_count}}</span>
+                            <span class="pluson" ng-click="plusCart(item.cart_id,1)">+</span>
+                        </div>
+                    </td>
+                    <td class="cart_td">
+                        <p class="cart_total" >
+                            {{item.cart_count*item.cart_price}}
+                        </p>
+                    </td>
+                    <td class="cart_td">
+                        <a  class="cart_remove" ng-click="delCart(item.cart_id)">删除</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="cart_account">
+                <div class="cart_fixed">
+                    <div class="cart_wrapper">
+                        <div class="cart_sum">
+                            <a class="shopcart_btn" ng-click="pay()">去结算</a>
+                            <p class="cart_info">
+
+                                已选 <span class="totalNum">{{totalCount}}</span> 件 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;合计：
+                                <span class="totalPrice">￥{{totalPrice}}</span>
+
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="modal">
+    <div class="modal_content">
+        <div class="login_rt">
+            <div class="form_login">
+                <div class="login_content">
+                    <h3>美图帐号登录</h3>
+                    <div class="login_phone" id="userPhone">
+                        <input type="text" placeholder="邮箱/手机号码" class="input_info"/>
+                        <div class="tips">
+                        </div>
+                    </div>
+
+                    <div class="login_phone" id="userPwd">
+                        <input type="text" placeholder="密码" class="input_info"/>
+                        <div class="tips">
+                        </div>
+                    </div>
+                    <div class="login_agree">
+                        <span class="agree_lt"><input type="checkbox"/>两天内自动登录</span>
+                        <a href="#/login" class="agree_rt">忘记密码？</a>
+                    </div>
+                    <div class="login_btn">
+                        <span>登录</span>
+                    </div>
+
+                </div>
+                <div class="login_other">
+                    或使用 其他方式登录 <br/>
+                    <p>
+                        <a href="#/login"><i class="icon icon_sina"></i></a>
+                        <a href="#/login"><i class="icon icon_qq"></i></a>
+                        <a href="#/login"><i class="icon icon_alipay"></i></a>
+                    </p>
+                </div>
+            </div>
+            <div class="guide">
+                还没有美图帐号？<a href="#/register">立即注册</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include="'html/include/footer.html'"></div>
